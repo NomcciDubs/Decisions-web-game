@@ -1,0 +1,357 @@
+{
+  "1-1": {
+    "description": "Te encuentras en la sala de espera de una importante empresa de ingeniería. Antes de la entrevista, te das cuenta de que olvidaste traer el registro de ingeniero de la COPNIA. ¿Qué haces?",
+    "options": [
+      { "text": "Entrar a la entrevista y mencionar que no tienes el registro.", "nextRoute": "1-2" },
+      { "text": "Entrar a la entrevista y no mencionar el registro.", "nextRoute": "1-3" },
+      { "text": "Decidir salir y conseguir el registro antes de intentar la entrevista.", "nextRoute": "1-4" }
+    ]
+  },
+  "1-2": {
+    "description": "Admites que no tienes el registro. El entrevistador parece comprensivo pero decide que no puedes ser contratado sin él. Este es el final.",
+    "ending": "bad"
+  },
+  "1-3": {
+    "description": "Decides no mencionar el registro, pero el entrevistador hace preguntas y no puedes responder. Este es el final.",
+    "ending": "bad"
+  },
+  "1-4": {
+    "description": "Decides salir y obtener el registro. Después de un tiempo, regresas y logras conseguir la entrevista. El entrevistador comienza a hacerte preguntas técnicas. ¿Cómo te presentas?",
+    "options": [
+      { "text": "Hablar sobre tu experiencia y cómo obtuviste el registro.", "nextRoute": "1-5" },
+      { "text": "Minimizar la importancia del registro y centrarte en tus habilidades.", "nextRoute": "1-6" },
+      { "text": "Responder a las preguntas técnicas del entrevistador con confianza.", "nextRoute": "1-7" },
+      { "text": "Dudar al responder preguntas técnicas y parecer inseguro.", "nextRoute": "1-8" }
+    ]
+  },
+  "1-5": {
+    "description": "El entrevistador queda impresionado con tu iniciativa. Te contratan. Comienzas a trabajar en un nuevo proyecto. Sin embargo, te piden que elabores un informe sobre la viabilidad técnica de un nuevo sistema. ¿Qué haces?",
+    "options": [
+      { "text": "Investigar a fondo y elaborar un informe detallado.", "nextRoute": "2-1" },
+      { "text": "Hacer un informe superficial para cumplir con el plazo.", "nextRoute": "2-2" }
+    ]
+  },
+  "1-6": {
+    "description": "El entrevistador parece dudoso sobre tus habilidades. Decide no contratarte. Este es el final.",
+    "ending": "bad"
+  },
+  "1-7": {
+    "description": "El entrevistador está impresionado por tu conocimiento técnico y te hace más preguntas sobre un proyecto específico que has manejado. ¿Cómo respondes?",
+    "options": [
+      { "text": "Hablar sobre los desafíos técnicos que enfrentaste y cómo los resolviste.", "nextRoute": "1-9" },
+      { "text": "Enfocarte en los resultados sin entrar en detalles técnicos.", "nextRoute": "1-10" }
+    ]
+  },
+  "1-8": {
+    "description": "Tu falta de confianza en las respuestas técnicas no impresiona al entrevistador. Este es el final.",
+    "ending": "bad"
+  },
+  "1-9": {
+    "description": "Tu respuesta sobre los desafíos técnicos muestra tu capacidad para resolver problemas. Te contratan. Comienzas a trabajar en un nuevo proyecto.",
+    "options": [
+      { "text": "Seguir los procedimientos y ser honesto.", "nextRoute": "2-1" },
+      { "text": "Ignorar los procedimientos para cumplir con el plazo.", "nextRoute": "2-2" }
+    ]
+  },
+  "1-10": {
+    "description": "El entrevistador parece satisfecho con los resultados, pero le falta la profundidad técnica en tus respuestas. Decide no contratarte. Este es el final.",
+    "ending": "bad"
+  },
+  "1-11": {
+    "description": "El entrevistador se muestra escéptico sobre la viabilidad del proyecto que presentaste. Te pide que expliques cómo planeas enfrentar los desafíos. ¿Qué respondes?",
+    "options": [
+      { "text": "Ofrecer soluciones innovadoras y mostrar cómo se pueden implementar.", "nextRoute": "1-12" },
+      { "text": "Admitir que no tienes todas las respuestas y que necesitarás más tiempo para investigar.", "nextRoute": "1-13" }
+    ]
+  },
+  "1-12": {
+    "description": "El entrevistador queda impresionado con tus soluciones y tu enfoque proactivo. Te contratan y comienzas a trabajar en un nuevo proyecto que involucra el uso de nuevas tecnologías. ¿Qué harás primero?",
+    "options": [
+      { "text": "Formar un equipo para investigar nuevas tecnologías.", "nextRoute": "5-5" },
+      { "text": "Decidir hacer todo por tu cuenta para asegurar que se cumplan los estándares.", "nextRoute": "5-6" }
+    ]
+  },
+  "1-13": {
+    "description": "El entrevistador aprecia tu honestidad, pero decide que no puedes ser contratado por falta de preparación. Este es el final.",
+    "ending": "bad"
+  },
+  "2-1": {
+    "description": "Tu proyecto avanza sin problemas y recibes elogios por tu trabajo. Sin embargo, te das cuenta de que uno de los proveedores ha estado retrasando el envío de materiales. ¿Qué harás?",
+    "options": [
+      { "text": "Informar a tu superior sobre el retraso y buscar una solución.", "nextRoute": "2-3" },
+      { "text": "Intentar resolver el problema tú mismo, buscando un proveedor alternativo.", "nextRoute": "2-4" },
+      { "text": "Negociar con el proveedor para que acelere el envío.", "nextRoute": "2-12" }
+    ]
+  },
+  "2-2": {
+    "description": "Decides ignorar los procedimientos. El proyecto falla y el cliente se queja. ¿Qué harás?",
+    "options": [
+      { "text": "Asumir la responsabilidad.", "nextRoute": "4-1" },
+      { "text": "Echarle la culpa a otro colega.", "nextRoute": "4-2" }
+    ]
+  },
+  "2-3": {
+    "description": "Informas a tu superior sobre el retraso. Él se muestra comprensivo, pero advierte que debes cumplir con los plazos. Te da más trabajo para acelerar el proyecto. ¿Qué harás?",
+    "options": [
+      { "text": "Aceptar el trabajo adicional y gestionar tu tiempo con cuidado.", "nextRoute": "3-1" },
+      { "text": "Negarte a tomar más responsabilidades y centrarte en la calidad.", "nextRoute": "3-2" },
+      { "text": "Proponer una reunión con el equipo para discutir soluciones y repartir la carga.", "nextRoute": "2-6" }
+    ]
+  },
+  "2-4": {
+    "description": "Decides resolver el problema tú mismo. Encuentras un proveedor alternativo, pero los costos son mucho más altos. Esto afectará el presupuesto del proyecto. ¿Qué harás?",
+    "options": [
+      { "text": "Informar a tu jefe sobre el nuevo proveedor y los costos adicionales.", "nextRoute": "2-5" },
+      { "text": "Ocultar los costos adicionales y continuar con el proyecto.", "nextRoute": "4-3" },
+      { "text": "Investigar opciones de financiamiento para cubrir el aumento de costos.", "nextRoute": "2-7" }
+    ]
+  },
+  "2-5": {
+    "description": "Informar a tu jefe sobre el nuevo proveedor y los costos adicionales. Tu jefe aprecia tu honestidad, pero ahora deben encontrar maneras de ajustar el presupuesto. ¿Qué harás?",
+    "options": [
+      { "text": "Aceptar el desafío y dar lo mejor de ti para cumplir con el proyecto.", "nextRoute": "2-18" },
+      { "text": "Negociar con el proveedor para obtener un mejor precio.", "nextRoute": "2-19" }
+    ]
+  },
+  "2-6": {
+    "description": "Propones una reunión con el equipo. Juntos, encuentran maneras creativas de cumplir con el plazo sin sacrificar la calidad. ¿Qué enfoque eliges?",
+    "options": [
+      { "text": "Implementar un sistema de gestión de proyectos para mantener a todos en la misma página.", "nextRoute": "2-8" },
+      { "text": "Dividir el proyecto en tareas más pequeñas y asignarlas a cada miembro del equipo.", "nextRoute": "2-9" }
+    ]
+  },
+  "2-7": {
+    "description": "Investigando opciones de financiamiento, encuentras una posible subvención que podría ayudar a cubrir los costos. ¿Qué harás?",
+    "options": [
+      { "text": "Preparar una propuesta detallada y presentar la subvención a la dirección.", "nextRoute": "2-10" },
+      { "text": "Decidir seguir adelante sin financiamiento, confiando en que el proyecto se ajuste al presupuesto.", "nextRoute": "4-4" }
+    ]
+  },
+  "2-8": {
+    "description": "Implementas un sistema de gestión de proyectos. Esto mejora la comunicación y el flujo de trabajo del equipo, resultando en un proyecto exitoso. Este es el final.",
+    "ending": "good"
+  },
+  "2-9": {
+    "description": "Divides el proyecto en tareas más pequeñas, pero algunos miembros del equipo no cumplen con los plazos. ¿Cómo manejas esta situación?",
+    "options": [
+      { "text": "Hablar con los miembros del equipo y ofrecer ayuda para completar las tareas.", "nextRoute": "2-11" },
+      { "text": "Informar a tu superior sobre el bajo rendimiento del equipo.", "nextRoute": "4-5" }
+    ]
+  },
+  "2-10": {
+    "description": "Preparas una propuesta detallada. La dirección está impresionada con tu iniciativa y decide apoyar la subvención. ¿Cómo procedes?",
+    "options": [
+      { "text": "Coordinar con el equipo para implementar mejoras en el proyecto.", "nextRoute": "5-3" },
+      { "text": "Dedicar tiempo extra para asegurarte de que todos estén capacitados en el uso de nuevas tecnologías.", "nextRoute": "5-4" }
+    ]
+  },
+  "2-11": {
+    "description": "Decides hablar con los miembros del equipo y ofrecer ayuda. Algunos aceptan tu apoyo, mientras que otros se sienten abrumados y siguen luchando. ¿Qué harás ahora?",
+    "options": [
+      { "text": "Organizar una sesión de trabajo grupal para abordar las tareas pendientes.", "nextRoute": "2-14" },
+      { "text": "Enfocar tu ayuda en los que están más desbordados y dejar de lado a los demás.", "nextRoute": "4-4" },
+      { "text": "Revisar el plan del proyecto y redistribuir las tareas para que sean más manejables.", "nextRoute": "2-16" }
+    ]
+  },
+  "2-12": {
+    "description": "Negocias con el proveedor y logras que aceleren el envío. Sin embargo, descubres que los materiales entregados no son de la calidad requerida. ¿Qué harás?",
+    "options": [
+      { "text": "Informar a tu jefe sobre la calidad deficiente y buscar un reemplazo.", "nextRoute": "2-15" },
+      { "text": "Decidir usar los materiales a pesar de la calidad para no retrasar el proyecto.", "nextRoute": "4-11" }
+    ]
+  },
+  "2-13": {
+    "description": "Tu jefe agradece tu honestidad sobre la calidad de los materiales y decide buscar un proveedor alternativo. ¿Cómo manejas la situación?",
+    "options": [
+      { "text": "Ayudar a investigar proveedores y asegurar la calidad de los materiales.", "nextRoute": "5-7" },
+      { "text": "Sentirte aliviado de que tu jefe está manejando el problema y continuar con otras tareas.", "nextRoute": "5-8" },
+      { "text": "Proponer realizar una prueba de calidad en los materiales antes de decidir usarlos.", "nextRoute": "5-9" }
+    ]
+  },
+  "2-14": {
+    "description": "Redistribuyes las tareas y logras que todos tengan una carga de trabajo más manejable. El equipo comienza a trabajar mejor, pero surge un nuevo desafío. ¿Cómo procedes?",
+    "options": [
+      { "text": "Organizar una reunión para discutir el progreso y ajustar las expectativas.", "nextRoute": "2-16" },
+      { "text": "Confiar en que el nuevo enfoque funcionará y continuar con el trabajo.", "nextRoute": "2-17" }
+    ]
+  },
+  "2-15": {
+    "description": "Informar a tu jefe sobre la calidad deficiente lleva a una búsqueda urgente de un nuevo proveedor. Esto retrasa el proyecto, pero asegura que se utilicen materiales de calidad. ¿Cómo manejas el tiempo adicional?",
+    "options": [
+      { "text": "Revisar y ajustar el cronograma del proyecto con el equipo.", "nextRoute": "5-13" },
+      { "text": "Tratar de acelerar otros aspectos del proyecto para compensar la pérdida de tiempo.", "nextRoute": "5-14" }
+    ]
+  },
+  "2-16": {
+    "description": "La reunión revela problemas de comunicación entre los miembros del equipo. Decides implementar un nuevo sistema de comunicación. ¿Qué harás?",
+    "options": [
+      { "text": "Establecer reuniones semanales para mantener a todos informados.", "nextRoute": "5-10" },
+      { "text": "Usar una herramienta de gestión de proyectos para mejorar la colaboración.", "nextRoute": "5-11" }
+    ]
+  },
+  "2-17": {
+    "description": "El nuevo enfoque no funciona como esperabas. La presión aumenta y el equipo comienza a sentirse abrumado nuevamente. ¿Cómo manejas esta situación?",
+    "options": [
+      { "text": "Llamar a todos a una reunión para discutir los problemas y buscar soluciones.", "nextRoute": "4-5" },
+      { "text": "Intentar manejar todo por tu cuenta, creyendo que puedes resolverlo solo.", "nextRoute": "4-6" }
+    ]
+  },
+  "2-18": {
+    "description": "Decides aceptar el desafío. Trabajas arduamente y logras ajustar el presupuesto. El proyecto se completa a tiempo, y la dirección queda impresionada. Este es el final.",
+    "ending": "good"
+  },
+  "2-19": {
+    "description": "Negocias con el proveedor y logras reducir los costos. Sin embargo, esto provoca retrasos en la entrega. ¿Cómo manejas la situación?",
+    "options": [
+      { "text": "Informar a tu equipo sobre los retrasos y ajustar el cronograma.", "nextRoute": "2-20" },
+      { "text": "Tratar de acelerar otras áreas del proyecto para compensar el retraso.", "nextRoute": "2-21" }
+    ]
+  },
+  "2-20": {
+    "description": "Informar a tu equipo sobre los retrasos permite una mejor planificación. El proyecto se completa a tiempo. Este es el final.",
+    "ending": "good"
+  },
+  "2-21": {
+    "description": "Intentar acelerar otras áreas del proyecto resulta en una ejecución apresurada. El resultado final no cumple con los estándares esperados, y el cliente no está satisfecho. Este es el final.",
+    "ending": "bad"
+  },
+  "4-1": {
+    "description": "Te han despedido y has enfrentado consecuencias legales. Este es el final.",
+    "ending": "bad"
+  },
+  "4-2": {
+    "description": "Echar la culpa a tu colega no te salva. Ambos son despedidos. Este es el final.",
+    "ending": "bad"
+  },
+  "4-3": {
+    "description": "Ocultar los costos adicionales resulta en un descubrimiento. El proyecto se sobrepasa de presupuesto y enfrentas problemas con la dirección. Este es el final.",
+    "ending": "bad"
+  },
+  "4-4": {
+    "description": "La falta de comunicación en el equipo lleva a un proyecto defectuoso. Tu supervisor decide investigar la situación. ¿Cómo manejas esta presión?",
+    "options": [
+      { "text": "Admitir los errores y proponer soluciones.", "nextRoute": "4-5" },
+      { "text": "Culpar a otros para salvar tu reputación.", "nextRoute": "4-6" }
+    ]
+  },
+  "4-5": {
+    "description": "Informar a tu superior sobre el bajo rendimiento del equipo no ayuda. El supervisor decide investigar la situación y descubre que hay problemas de comunicación dentro del equipo. Te pide que organizes una reunión para abordar estos problemas. ¿Qué haces?",
+    "options": [
+      { "text": "Preparar un agenda clara y mediar la reunión.", "nextRoute": "4-7" },
+      { "text": "Reunirte informalmente con el equipo y discutir las quejas sin estructurar nada.", "nextRoute": "4-8" }
+    ]
+  },
+  "4-6": {
+    "description": "La reunión informal no resulta productiva. Algunos miembros del equipo se sienten incómodos y no expresan sus opiniones. El rendimiento sigue siendo bajo, y el proyecto se ve amenazado. Este es el final.",
+    "ending": "bad"
+  },
+  "4-7": {
+    "description": "La reunión se lleva a cabo con éxito. Logras que el equipo exprese sus preocupaciones y encuentras soluciones. ¿Qué harás ahora para asegurar un mejor rendimiento en el futuro?",
+    "options": [
+      { "text": "Implementar un sistema regular de retroalimentación y evaluación del desempeño.", "nextRoute": "4-9" },
+      { "text": "Continuar con el trabajo actual sin hacer cambios, confiando en que las cosas mejorarán.", "nextRoute": "4-10" }
+    ]
+  },
+  "4-8": {
+    "description": "Decidir no hacer cambios resulta en un aumento del estrés en el equipo y un deterioro del ambiente laboral. El proyecto falla y enfrentas repercusiones. Este es el final.",
+    "ending": "bad"
+  },
+  "4-9": {
+    "description": "Implementas un sistema regular de retroalimentación. El equipo mejora su comunicación y rendimiento, y el proyecto se completa exitosamente. Este es el final.",
+    "ending": "good"
+  },
+  "4-10": {
+    "description": "Decidir no hacer cambios resulta en un aumento del estrés en el equipo y un deterioro del ambiente laboral. El proyecto falla y enfrentas repercusiones. Este es el final.",
+    "ending": "bad"
+  },
+  "4-11": {
+    "description": "Decides usar los materiales de calidad deficiente. El proyecto avanza, pero varios problemas surgen debido a la baja calidad. El cliente se queja y se generan retrasos. ¿Qué harás ahora?",
+    "options": [
+      { "text": "Informar al cliente sobre los problemas y ofrecer soluciones.", "nextRoute": "4-12" },
+      { "text": "Intentar resolver los problemas internamente sin informar al cliente.", "nextRoute": "4-13" }
+    ]
+  },
+  "4-12": {
+    "description": "Al informar al cliente y ofrecer soluciones, logras mantener su confianza. Aunque el proyecto se retrasa, trabajan juntos para solucionarlo. Este es el final.",
+    "ending": "good"
+  },
+  "4-13": {
+    "description": "Al intentar resolver los problemas internamente sin informar al cliente, la situación se agrava. El cliente decide rescindir el contrato. Este es el final.",
+    "ending": "bad"
+  },
+  "4-14": {
+    "description": "La falta de comunicación en el equipo lleva a un proyecto defectuoso. Tu supervisor decide investigar la situación. ¿Cómo manejas esta presión?",
+    "options": [
+      { "text": "Admitir los errores y proponer soluciones.", "nextRoute": "4-5" },
+      { "text": "Culpar a otros para salvar tu reputación.", "nextRoute": "4-6" }
+    ]
+  },
+  "5-1": {
+    "description": "Te mantienes firme y se respeta tu ética. Te reconocen y te ascienden por tu integridad. Este es el final.",
+    "ending": "good"
+  },
+  "5-2": {
+    "description": "Buscar maneras de salir de la situación solo aumenta el estrés y la presión. Terminas cometiendo errores y afectando la calidad del proyecto. Este es el final.",
+    "ending": "bad"
+  },
+  "5-3": {
+    "description": "Coordinar con el equipo para implementar mejoras en el proyecto resulta en un trabajo colaborativo efectivo. Logran completar el proyecto a tiempo y con alta calidad. La dirección queda muy satisfecha con los resultados. Este es el final.",
+    "ending": "good"
+  },
+  "5-4": {
+    "description": "Dedicar tiempo extra para capacitar al equipo en nuevas tecnologías mejora las habilidades del equipo, pero afecta tus propias tareas y causa un retraso en el proyecto. El resultado es un éxito parcial, ya que el proyecto se completa, pero no cumple con todos los estándares de calidad esperados. Este es el final.",
+    "ending": "mixed"
+  },
+  "5-5": {
+    "description": "Formas un equipo para investigar nuevas tecnologías. La colaboración resulta en una implementación exitosa de la tecnología. Este es el final.",
+    "ending": "good"
+  },
+  "5-6": {
+    "description": "Decides hacer todo por tu cuenta. Aunque al principio parece que todo va bien, eventualmente te sientes abrumado y cometes errores. Este es el final.",
+    "ending": "bad"
+  },
+  "5-7": {
+    "description": "Ayudas a investigar proveedores. Tu esfuerzo lleva a encontrar un proveedor de calidad que mejora el proyecto. Este es el final.",
+    "ending": "good"
+  },
+  "5-8": {
+    "description": "Te relajas pensando que tu jefe se encargará del problema. Sin embargo, no logras completar tus tareas y el proyecto se ve afectado. Este es el final.",
+    "ending": "bad"
+  },
+  "5-9": {
+    "description": "Realizas pruebas de calidad en los materiales. Los resultados indican que son insuficientes para el proyecto. ¿Qué harás ahora?",
+    "options": [
+      { "text": "Informar a tu jefe sobre los resultados y sugerir un nuevo proveedor.", "nextRoute": "5-12" },
+      { "text": "Decidir ocultar los resultados, confiando en que los materiales aún podrían funcionar.", "nextRoute": "4-7" }
+    ]
+  },
+  "5-10": {
+    "description": "Las reuniones semanales mejoran la comunicación y el rendimiento del equipo. Logran completar el proyecto exitosamente y con alta calidad. Este es el final.",
+    "ending": "good"
+  },
+  "5-11": {
+    "description": "Usar una herramienta de gestión de proyectos aumenta la colaboración y la transparencia entre los miembros del equipo. El proyecto se completa a tiempo y con buenos resultados. Este es el final.",
+    "ending": "good"
+  },
+  "5-12": {
+    "description": "Tu jefe aprecia que hayas realizado las pruebas y decide buscar un nuevo proveedor. El proyecto se retrasa, pero se asegura que los materiales sean de calidad. Este es el final.",
+    "ending": "good"
+  },
+  "5-13": {
+    "description": "Revisar y ajustar el cronograma del proyecto con el equipo mejora la colaboración y asegura que el proyecto se complete a tiempo. Este es el final.",
+    "ending": "good"
+  },
+  "5-14": {
+    "description": "Tratar de acelerar otros aspectos del proyecto resulta en un trabajo apresurado y de baja calidad. El cliente no está satisfecho con el resultado final. Este es el final.",
+    "ending": "bad"
+  },
+  "5-16": {
+    "description": "Después de implementar un sistema regular de retroalimentación, el equipo mejora su comunicación. El proyecto se completa exitosamente. Este es el final.",
+    "ending": "good"
+  },
+  "5-17": {
+    "description": "Aunque el sistema de retroalimentación se implementa, algunos miembros del equipo se resisten al cambio. El proyecto se retrasa debido a conflictos internos. Este es el final.",
+    "ending": "bad"
+  }
+}
+
