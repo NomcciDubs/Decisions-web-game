@@ -215,6 +215,36 @@
     "description": "Intentar acelerar otras áreas del proyecto resulta en una ejecución apresurada. El resultado final no cumple con los estándares esperados, y el cliente no está satisfecho. Este es el final.",
     "ending": "bad"
   },
+  "3-1": {
+    "description": "Aceptas el trabajo adicional. Empiezas a trabajar largas horas, pero logras mantener los plazos. Sin embargo, te sientes agotado y algunos errores comienzan a aparecer. ¿Qué harás?",
+    "options": [
+      { "text": "Seguir trabajando duro para cumplir con todo.", "nextRoute": "3-3" },
+      { "text": "Pedir ayuda a un colega para compartir la carga.", "nextRoute": "3-4" }
+    ]
+  },
+  "3-2": {
+    "description": "Decides no aceptar más responsabilidades, prefiriendo enfocarte en la calidad del trabajo actual. El proyecto avanza más lentamente, pero sin problemas. Sin embargo, tu superior no está del todo contento. ¿Qué harás?",
+    "options": [
+      { "text": "Explicar tus razones y pedir más tiempo.", "nextRoute": "3-5" },
+      { "text": "Aceptar las críticas y mantener tu enfoque en la calidad.", "nextRoute": "3-6" }
+    ]
+  },
+  "3-3": {
+    "description": "Sigues esforzándote y logras cumplir los plazos, pero la fatiga te pasa factura. Terminas entregando el proyecto a tiempo, aunque con algunos errores menores.",
+    "ending": "mixed"
+  },
+  "3-4": {
+    "description": "Pides ayuda a un colega. El trabajo en equipo mejora los resultados y reduces errores. Logran entregar el proyecto a tiempo con alta calidad.",
+    "ending": "good"
+  },
+  "3-5": {
+    "description": "Le explicas a tu superior la importancia de la calidad y consigues más tiempo. El proyecto avanza más despacio, pero con mejores resultados.",
+    "ending": "good"
+  },
+  "3-6": {
+    "description": "Aceptas las críticas, pero mantienes tu enfoque. El proyecto se retrasa un poco, pero es bien recibido por la alta calidad final.",
+    "ending": "mixed"
+  },
   "4-1": {
     "description": "Te han despedido y has enfrentado consecuencias legales. Este es el final.",
     "ending": "bad"

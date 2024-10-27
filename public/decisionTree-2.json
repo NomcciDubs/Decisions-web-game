@@ -1,0 +1,335 @@
+{
+    "1-1": {
+      "description": "¡Felicidades! Has sido ascendido a gerente de proyecto. Ahora tienes que liderar un equipo para desarrollar una nueva tecnología que podría revolucionar la industria. Sin embargo, el proyecto está bajo una gran presión de tiempo y presupuesto. ¿Qué harás primero?",
+      "options": [
+        { "text": "Reunir al equipo y establecer metas realistas.", "nextRoute": "2-1" },
+        { "text": "Aceptar y empezar el proyecto inmediatamente.", "nextRoute": "2-2" }
+      ]
+    },
+    "2-1": {
+      "description": "Reúnes al equipo y estableces expectativas claras, buscando enfocarte en la calidad del producto. Sin embargo, los directivos están presionando por un resultado más rápido. ¿Cómo manejas la situación?",
+      "options": [
+        { "text": "Negociar más tiempo para asegurar la calidad.", "nextRoute": "3-1" },
+        { "text": "Ceder a la presión y acelerar el trabajo.", "nextRoute": "3-2" }
+      ]
+    },
+    "2-2": {
+      "description": "Decides empezar sin una planificación detallada. El equipo está confundido y desorganizado, pero logras avanzar rápido. Sin embargo, empiezan a aparecer errores en el diseño. ¿Cómo reaccionas?",
+      "options": [
+        { "text": "Ignorar los errores menores y seguir adelante.", "nextRoute": "3-3" },
+        { "text": "Detener el trabajo para corregir los problemas.", "nextRoute": "3-4" }
+      ]
+    },
+    "3-1": {
+      "description": "Logras negociar más tiempo, pero ahora te enfrentas a un dilema ético. Un proveedor te ofrece un material más barato que podría comprometer la seguridad del producto. ¿Qué decides?",
+      "options": [
+        { "text": "Rechazar el material y buscar alternativas seguras.", "nextRoute": "4-1" },
+        { "text": "Aceptar el material para reducir costos.", "nextRoute": "4-2" }
+      ]
+    },
+    "3-2": {
+      "description": "Aceleras el trabajo, pero empiezan a surgir más errores graves. Uno de tus ingenieros te advierte sobre un problema ético en el diseño. ¿Cómo respondes?",
+      "options": [
+        { "text": "Escuchar sus preocupaciones y detener el proyecto.", "nextRoute": "4-3" },
+        { "text": "Ignorar las preocupaciones y continuar.", "nextRoute": "4-4" }
+      ]
+    },
+    "3-3": {
+        "description": "Los errores acumulados resultan en un fallo crítico. El proyecto es un desastre y la empresa pierde millones. Tu carrera está en peligro.",
+        "ending": "bad"
+    },
+    "3-4": {
+        "description": "Decides corregir los errores, pero esto retrasa enormemente el proyecto. Tu equipo se siente desmotivado y la moral baja.",
+        "options": [
+        { "text": "Motivar al equipo con promesas de recompensas futuras.", "nextRoute": "4-7" },
+        { "text": "Presionar aún más para cumplir con los plazos.", "nextRoute": "4-8" }
+        ]
+    },
+    "4-1": {
+    "description": "Rechazas el material peligroso y logras obtener uno más seguro. Aunque el proyecto se retrasa, la calidad es excelente. ¡Buen trabajo!",
+    "options": [
+      { "text": "Solicitar una reunión para discutir cómo evitar retrasos futuros en la selección de materiales.", "nextRoute": "6-7" },
+      { "text": "Establecer una política estricta para el uso de materiales seguros, priorizando siempre la seguridad sobre los plazos.", "nextRoute": "6-8" }
+    ]
+  },
+    "4-2": {
+        "description": "Aceptas el material barato. Al final, el producto falla y pone en riesgo la seguridad de los usuarios. Eres despedido y enfrentas una investigación legal.",
+        "ending": "bad"
+    },
+    "4-3": {
+    "description": "Escuchas las preocupaciones de tu ingeniero y te tomas el tiempo para corregir el problema. Aunque pierdes tiempo, el proyecto es exitoso.",
+    "options": [
+      { "text": "Celebrar el éxito del proyecto con el equipo y reconocer sus contribuciones.", "nextRoute": "6-3" },
+      { "text": "Evaluar el proceso para identificar posibles mejoras en futuros proyectos.", "nextRoute": "6-4" }
+    ]
+  },
+    "4-4": {
+        "description": "Ignoras las preocupaciones y el proyecto se lanza. Sin embargo, poco después, se descubre una falla que provoca un desastre.",
+        "ending": "bad"
+    },
+    "4-5": {
+        "description": "Motivas al equipo con promesas, pero al final, no puedes cumplirlas. La moral cae aún más y el proyecto fracasa.",
+        "ending": "bad"
+    },
+    "4-6": {
+        "description": "Presionas al equipo, pero esto genera más errores. El producto final es de baja calidad y el proyecto es un fracaso total.",
+        "ending": "bad"
+    },
+    "4-7": {
+        "description": "El equipo, motivado por las promesas, mejora su rendimiento, pero la presión sigue generando tensiones. Decides tomar medidas adicionales.",
+        "options": [
+        { "text": "Implementar sesiones de trabajo en equipo.", "nextRoute": "5-1" },
+        { "text": "Establecer metas a corto plazo.", "nextRoute": "5-2" }
+        ]
+    },
+    "4-8": {
+        "description": "Al presionar al equipo, logran completar el proyecto a tiempo, pero el estrés ha generado problemas de salud entre algunos miembros.",
+        "options": [
+        { "text": "Proporcionar apoyo psicológico al equipo.", "nextRoute": "5-3" },
+        { "text": "Ajustar las cargas de trabajo para equilibrar el estrés.", "nextRoute": "5-4" }
+        ]
+    },
+    "5-1": {
+        "description": "Las sesiones de trabajo en equipo mejoran la comunicación y la cohesión del grupo. Logran completar el proyecto con éxito, pero con un alto costo emocional.",
+        "ending": "mixed"
+    },
+    "5-2": {
+        "description": "Establecer metas a corto plazo ayuda a mantener al equipo enfocado. El proyecto se completa, pero surgen tensiones sobre el cumplimiento de objetivos futuros.",
+        "ending": "mixed"
+    },
+    "5-3": {
+    "description": "Proporcionar apoyo psicológico mejora el bienestar del equipo, pero se tarda en ver resultados. A pesar de ello, logran superar los desafíos del proyecto.",
+    "options": [
+      { "text": "Evaluar el impacto del apoyo en el rendimiento y continuar con el enfoque a largo plazo.", "nextRoute": "6-1" },
+      { "text": "Aumentar la inversión en más recursos para mejorar la eficiencia del equipo.", "nextRoute": "6-2" }
+    ]
+  },
+    "5-4": {
+        "description": "Ajustar las cargas de trabajo ayuda a reducir el estrés, pero algunos miembros del equipo sienten que sus contribuciones no son valoradas.",
+        "ending": "mixed"
+    },
+
+  "6-1": {
+  "description": "Optas por evaluar el impacto del apoyo psicológico, descubriendo que la moral ha mejorado notablemente. Sin embargo, algunos miembros todavía enfrentan dificultades de rendimiento. ¿Cuál será tu siguiente paso?",
+  "options": [
+    { "text": "Implementar programas de capacitación específicos para fortalecer sus habilidades.", "nextRoute": "7-1" },
+    { "text": "Realizar ajustes en la estructura del equipo para distribuir mejor las tareas según habilidades.", "nextRoute": "7-2" }
+  ]
+  },
+  "6-2": {
+    "description": "Decides aumentar la inversión en más recursos, contratando personal adicional y adquiriendo herramientas más eficientes. Sin embargo, el presupuesto se ve ajustado, lo que preocupa a los directivos. ¿Cómo respondes a esta presión?",
+    "options": [
+      { "text": "Presentar un informe detallado del impacto positivo esperado por la inversión.", "nextRoute": "7-3" },
+      { "text": "Intentar reducir los costos ajustando el enfoque del proyecto.", "nextRoute": "7-4" }
+    ]
+  },
+  "6-3": {
+    "description": "Celebras el éxito con el equipo y reconoces sus contribuciones, lo que fortalece la moral y la confianza mutua. Sin embargo, algunos miembros expresan preocupaciones sobre la falta de organización inicial. ¿Qué harás?",
+    "options": [
+      { "text": "Revisar los procedimientos para reducir los problemas en el próximo proyecto.", "nextRoute": "7-5" },
+      { "text": "Animar al equipo a proponer ideas para mejorar la organización del proyecto.", "nextRoute": "7-6" }
+    ]
+  },
+  "6-4": {
+    "description": "Optas por evaluar el proceso y descubres áreas donde se podría mejorar la eficiencia. Sin embargo, algunos miembros del equipo sienten que se da más prioridad al proceso que a su bienestar. ¿Cuál será tu próximo paso?",
+    "options": [
+      { "text": "Incorporar retroalimentación de todo el equipo para mejorar el proceso de manera equilibrada.", "nextRoute": "7-7" },
+      { "text": "Establecer objetivos de eficiencia más claros y definir un plan de acción detallado.", "nextRoute": "7-8" }
+    ]
+  },
+  "6-7": {
+    "description": "Organizas una reunión para discutir cómo evitar retrasos en la selección de materiales. El equipo sugiere crear un protocolo preventivo, pero algunos miembros se preocupan por los costos adicionales. ¿Cómo reaccionas?",
+    "options": [
+      { "text": "Aceptar el protocolo para asegurar la calidad y seguridad.", "nextRoute": "7-9" },
+      { "text": "Buscar un balance entre calidad y costos para minimizar gastos.", "nextRoute": "7-10" }
+    ]
+  },
+  "6-8": {
+    "description": "Implementas una política estricta de uso de materiales seguros, lo que refuerza la seguridad del equipo. Sin embargo, esto alarga el tiempo de entrega en algunos proyectos.",
+    "options": [
+      { "text": "Aceptar los tiempos más largos en favor de la seguridad.", "nextRoute": "7-11" },
+      { "text": "Revisar los protocolos para encontrar puntos de optimización en el proceso.", "nextRoute": "7-12" }
+    ]
+  },
+  "7-1": {
+    "description": "Organizas programas de capacitación que mejoran las habilidades del equipo. Aunque hay un avance notable, algunos miembros aún muestran resistencia al cambio. ¿Qué harás para continuar el progreso?",
+    "options": [
+      { "text": "Incentivar el desarrollo individual y premiar los avances logrados.", "nextRoute": "8-1" },
+      { "text": "Organizar reuniones regulares para abordar las dificultades y encontrar soluciones conjuntas.", "nextRoute": "8-2" }
+    ]
+  },
+  "7-2": {
+    "description": "Reestructuras el equipo, asignando roles específicos según las fortalezas de cada miembro. Esto mejora el flujo de trabajo, pero aumenta la carga de ciertos miembros clave. ¿Cómo equilibras el equipo?",
+    "options": [
+      { "text": "Contratar consultores temporales para apoyar en las áreas críticas.", "nextRoute": "8-3" },
+      { "text": "Redistribuir tareas de manera equitativa, aun si esto ralentiza el proyecto.", "nextRoute": "8-4" }
+    ]
+  },
+  "7-3": {
+    "description": "Presentas un informe que demuestra cómo la inversión traerá beneficios a largo plazo. Los directivos aceptan con reservas, pero te exigen cumplir con los plazos. ¿Cuál es tu estrategia?",
+    "options": [
+      { "text": "Acelerar el ritmo y supervisar de cerca cada etapa del proyecto.", "nextRoute": "8-5" },
+      { "text": "Mantener el enfoque en la calidad, aunque eso signifique un avance más lento.", "nextRoute": "8-6" }
+    ]
+  },
+  "7-4": {
+    "description": "Reduces los costos ajustando el enfoque del proyecto, eliminando ciertas características. Aunque el equipo avanza más rápido, algunos clientes expresan su insatisfacción. ¿Qué harás?",
+    "options": [
+      { "text": "Negociar con los clientes para establecer expectativas realistas.", "nextRoute": "8-7" },
+      { "text": "Reintegrar las características eliminadas en futuras fases del proyecto.", "nextRoute": "8-8" }
+    ]
+  },
+  "7-5": {
+    "description": "Revisas los procedimientos y propones cambios para optimizar la organización del proyecto. Esto mejora el flujo de trabajo, pero algunos miembros sienten que las nuevas reglas son demasiado rígidas.",
+    "options": [
+      { "text": "Mantener flexibilidad en la implementación de las nuevas reglas.", "nextRoute": "8-9" },
+      { "text": "Aplicar las reglas estrictamente para asegurar la eficiencia.", "nextRoute": "8-10" }
+    ]
+  },
+  "7-6": {
+    "description": "Invitas al equipo a proponer ideas de organización, lo cual incrementa la participación y el compromiso de todos. Sin embargo, algunas sugerencias son poco prácticas. ¿Qué harás?",
+    "options": [
+      { "text": "Seleccionar las sugerencias más factibles y aplicarlas.", "nextRoute": "8-11" },
+      { "text": "Establecer criterios para evaluar propuestas y seleccionar solo las más viables.", "nextRoute": "8-12" }
+    ]
+  },
+  "7-7": {
+    "description": "Incorporas la retroalimentación del equipo, equilibrando eficiencia y bienestar. Sin embargo, implementar todos los cambios requiere tiempo y retrasa el inicio del siguiente proyecto.",
+    "options": [
+      { "text": "Aceptar el retraso y asegurar una buena implementación de los cambios.", "nextRoute": "8-13" },
+      { "text": "Priorizar algunos cambios para iniciar el proyecto a tiempo.", "nextRoute": "8-14" }
+    ]
+  },
+  "7-8": {
+    "description": "Estableces objetivos de eficiencia claros y un plan de acción detallado, lo que hace que el equipo avance con mayor rapidez. Sin embargo, algunos miembros sienten que el trabajo es demasiado acelerado.",
+    "options": [
+      { "text": "Reducir la carga de trabajo para evitar el agotamiento.", "nextRoute": "8-15" },
+      { "text": "Continuar con el ritmo actual para cumplir con los objetivos de eficiencia.", "nextRoute": "8-16" }
+    ]
+  },
+  "7-9": {
+    "description": "Decides aceptar el protocolo preventivo. El proyecto es seguro y de calidad, pero los costos incrementan. Los directivos cuestionan la rentabilidad de este enfoque.",
+    "options": [
+      { "text": "Proponer un sistema de control de calidad que sea más eficiente y rentable.", "nextRoute": "8-18" },
+      { "text": "Defender la inversión en seguridad y calidad como valor añadido para futuros proyectos.", "nextRoute": "8-17" }
+    ]
+  },
+  "7-10": {
+    "description": "Optas por buscar un balance entre calidad y costos, reduciendo los gastos generales sin comprometer demasiado la seguridad. Algunos problemas menores surgen en el proyecto.",
+    "options": [
+      { "text": "Realizar ajustes en tiempo real para asegurar la calidad final.", "nextRoute": "8-19" },
+      { "text": "Completar el proyecto sin más ajustes, pero tomar nota para mejorar en el futuro.", "nextRoute": "8-20" }
+    ]
+  },
+  "7-11": {
+    "description": "Aceptas los tiempos de entrega más largos como una inversión en seguridad. Aunque los clientes elogian la calidad, algunos sugieren que el proceso podría agilizarse.",
+    "options": [
+      { "text": "Investigar métodos para acelerar el proceso sin comprometer la seguridad.", "nextRoute": "8-21" },
+      { "text": "Mantener los estándares actuales y promover el enfoque en calidad con los clientes.", "nextRoute": "8-22" }
+    ]
+  },
+  "7-12": {
+    "description": "Revisas los protocolos y encuentras algunos puntos de optimización. Aunque la seguridad se mantiene, algunos miembros temen que la calidad pueda verse comprometida en el futuro.",
+    "options": [
+      { "text": "Reevaluar periódicamente para asegurar el balance entre eficiencia y calidad.", "nextRoute": "8-23" },
+      { "text": "Establecer un comité de revisión que supervise la calidad continuamente.", "nextRoute": "8-24" }
+    ]
+  },
+  "8-1": {
+    "description": "El equipo responde positivamente a los incentivos y mejora su rendimiento. Alcanzan un estado de colaboración óptimo, lo que impulsa el proyecto.",
+    "ending": "good"
+  },
+  "8-2": {
+    "description": "Las reuniones regulares fortalecen la confianza en el equipo y todos se comprometen más. El proyecto avanza sin mayores contratiempos.",
+    "ending": "good"
+  },
+  "8-3": {
+    "description": "Los consultores temporales alivian la carga de los miembros clave, pero el equipo tiene dificultades para coordinarse con el personal externo.",
+    "ending": "mixed"
+  },
+  "8-4": {
+    "description": "Redistribuyes las tareas equitativamente, pero esto retrasa el proyecto y los directivos cuestionan la estrategia. Aunque el equipo está satisfecho, el proyecto corre el riesgo de no completarse a tiempo.",
+    "ending": "bad"
+  },
+  "8-5": {
+    "description": "Al acelerar el ritmo y supervisar de cerca, logras entregar el proyecto a tiempo. Sin embargo, el equipo está exhausto y se generan tensiones. Aunque cumple con los objetivos, la cultura del equipo sufre.",
+    "ending": "mixed"
+  },
+  "8-6": {
+    "description": "Mantienes el enfoque en la calidad, lo que se traduce en un proyecto sólido y bien recibido, aunque entregado fuera del plazo original. Los directivos reconocen la importancia de priorizar la calidad.",
+    "ending": "good"
+  },
+  "8-7": {
+    "description": "Logras negociar con los clientes, quienes aceptan las limitaciones del proyecto y se muestran comprensivos. Esto ayuda a aliviar la presión y el proyecto progresa.",
+    "ending": "good"
+  },
+  "8-8": {
+    "description": "Propones reintegrar las características eliminadas en fases futuras, pero el equipo y los directivos cuestionan la estrategia a largo plazo. La incertidumbre afecta la cohesión del equipo.",
+    "ending": "bad"
+  },
+  "8-9": {
+    "description": "Mantienes flexibilidad en las nuevas reglas, permitiendo al equipo adaptarse sin sentirse presionado. Esto crea un ambiente colaborativo y el proyecto se completa con éxito.",
+    "ending": "good"
+  },
+  "8-10": {
+    "description": "Aplicas las reglas estrictamente, lo que aumenta la eficiencia a corto plazo, pero algunos miembros se sienten desmotivados. Aunque el proyecto es exitoso, el equipo sufre de agotamiento.",
+    "ending": "mixed"
+  },
+  "8-11": {
+    "description": "Implementas las sugerencias más prácticas, y el equipo trabaja mejor gracias a su propia contribución al proceso. Sin embargo, algunos problemas de organización persisten.",
+    "ending": "good"
+  },
+  "8-12": {
+    "description": "Estableces criterios para evaluar propuestas, seleccionando solo las viables. Esto aumenta la eficiencia, aunque el equipo se siente menos comprometido al no ver todas sus ideas aplicadas.",
+    "ending": "mixed"
+  },
+  "8-13": {
+    "description": "Aceptas el retraso para implementar los cambios de manera completa. Esto crea una sólida base organizacional, pero los directivos se muestran insatisfechos con el atraso.",
+    "ending": "mixed"
+  },
+  "8-14": {
+    "description": "Priorizas algunos cambios, lo que permite iniciar el proyecto a tiempo, aunque ciertos problemas de organización siguen sin resolverse.",
+    "ending": "bad"
+  },
+  "8-15": {
+    "description": "Reducir la carga de trabajo previene el agotamiento del equipo y mejora su satisfacción. Esto permite un buen rendimiento general.",
+    "ending": "good"
+  },
+  "8-16": {
+    "description": "Mantienes el ritmo acelerado para cumplir con los objetivos de eficiencia, pero el equipo se agota rápidamente y comete errores en el proyecto.",
+    "ending": "bad"
+  },
+  "8-17": {
+    "description": "Defiendes la inversión en seguridad y calidad, y aunque algunos directivos están de acuerdo, otros dudan del valor agregado. Logras convencerlos, y la reputación de la empresa mejora.",
+    "ending": "good"
+  },
+  "8-18": {
+    "description": "Propones un sistema de control de calidad más eficiente. Esto reduce los costos y mantiene estándares, aunque a algunos miembros del equipo les preocupa que el cambio se enfoque demasiado en la rentabilidad.",
+    "ending": "mixed"
+  },
+  "8-19": {
+    "description": "Realizas ajustes en tiempo real, asegurando una calidad final aceptable. Aunque el proyecto se completa sin mayores problemas, los costos de estos ajustes imprevistos se elevan.",
+    "ending": "mixed"
+  },
+  "8-20": {
+    "description": "Completas el proyecto sin más ajustes. El resultado es satisfactorio, pero los clientes notan algunos detalles que podrían haberse mejorado.",
+    "ending": "bad"
+  },
+  "8-21": {
+    "description": "Investigando métodos de aceleración, encuentras formas de optimizar sin comprometer la seguridad. Esto mejora la eficiencia, y los clientes están satisfechos con los resultados.",
+    "ending": "good"
+  },
+  "8-22": {
+    "description": "Mantienes los estándares actuales y promueves el enfoque en calidad. Aunque el tiempo de entrega es largo, los clientes aprecian el producto final.",
+    "ending": "good"
+  },
+  "8-23": {
+    "description": "Estableces un sistema de reevaluación periódica, que asegura un balance entre eficiencia y calidad. El equipo, sin embargo, siente una mayor presión para cumplir con estos controles frecuentes.",
+    "ending": "mixed"
+  },
+  "8-24": {
+    "description": "Creas un comité de revisión de calidad. El enfoque fortalece los estándares de seguridad, pero algunos miembros perciben el sistema como burocrático.",
+    "ending": "mixed"
+  }
+  }
+  
