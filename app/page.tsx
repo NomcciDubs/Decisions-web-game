@@ -9,6 +9,9 @@ const IntroPage: React.FC = () => {
     const handleContinue = () => {
         router.push('/game');
     };
+    const handleBuild = () => {
+        router.push('/json/builder');
+    };
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-8 bg-gray-900">
@@ -28,7 +31,13 @@ const IntroPage: React.FC = () => {
                 onClick={handleContinue}
                 className="menu-button px-6 py-3 text-lg sm:text-xl rounded-lg shadow-lg transition-transform duration-300 ease-in-out"
             >
-                Continuar
+                Jugar
+            </button>
+            <button
+                onClick={handleBuild}
+                className="menu-button px-6 py-3 text-lg sm:text-xl rounded-lg shadow-lg transition-transform duration-300 ease-in-out mt-8"
+            >
+                Creador de niveles
             </button>
         </div>
     );
