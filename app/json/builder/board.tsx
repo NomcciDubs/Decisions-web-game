@@ -22,6 +22,7 @@ interface BoardProps {
 
 const Board: React.FC<BoardProps> = ({ cards, onOptionDelete, onDeleteCard }) => {
     const [positions, setPositions] = useState<{ [key: string]: { x: number; y: number } }>({});
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [optionCoordinates, setOptionCoordinates] = useState<{ [key: string]: { x: number; y: number } }>({});
     const rootRef = useRef<HTMLDivElement | null>(null);
 
@@ -135,7 +136,6 @@ const Board: React.FC<BoardProps> = ({ cards, onOptionDelete, onDeleteCard }) =>
                     zIndex: 10,
                 }}
             >
-                {/* SVG del icono de descarga */}
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="50%"
