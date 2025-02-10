@@ -1,7 +1,6 @@
 import React, {useEffect, useState, useRef, useCallback} from 'react';
 import Card from '@/app/json/builder/card';
 import {Arrow} from 'react-absolute-svg-arrows';
-import {Option} from "commander";
 
 interface CardData {
     description: string;
@@ -9,6 +8,11 @@ interface CardData {
     ending?: string;
     position?: { x: number; y: number };
 }
+
+type Option = {
+    text: string;
+    nextRoute: string;
+};
 
 interface BoardProps {
     cards: { [key: string]: CardData },
@@ -76,7 +80,7 @@ const Board: React.FC<BoardProps> = ({cards, onOptionDelete, onDeleteCard}) => {
                     onDrag={handleDrag}
                     onOptionCoordinatesUpdate={handleOptionCoordinatesUpdate}
                     ref={id === "1-1" ? rootRef : null}
-                    onDeleteOption={onOptionDelete}
+                    onDeleteOption={onOptionDelete ?? (() => {})}
                     onDeleteCard={onDeleteCard}
                 />
             ))}

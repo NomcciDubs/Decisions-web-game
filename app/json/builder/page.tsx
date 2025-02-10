@@ -7,10 +7,16 @@ interface CardData {
     options?: { text: string; nextRoute: string }[];
     ending?: string;
 }
+type Option = {
+    text: string;
+    nextRoute: string;
+};
+
 
 interface CardDataWithPosition extends CardData {
     position: { x: number; y: number };
 }
+
 
 const calculateCardPositions = (cards: { [key: string]: CardData }): { [key: string]: CardDataWithPosition } => {
     const newCards: { [key: string]: CardDataWithPosition } = {};
