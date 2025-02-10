@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useState, useRef, useCallback} from 'react';
 import Card from '@/app/json/builder/card';
 import {Arrow} from 'react-absolute-svg-arrows';
 import {Option} from "commander";
@@ -21,12 +21,20 @@ const Board: React.FC<BoardProps> = ({cards, onOptionDelete, onDeleteCard}) => {
     const [optionCoordinates, setOptionCoordinates] = useState<{ [key: string]: { x: number; y: number } }>({});
     const rootRef = useRef<HTMLDivElement | null>(null);
 
-    const handleOptionCoordinatesUpdate = (optionIndex: number, coords: { x: number; y: number }) => {
-        setOptionCoordinates((prev) => ({
-            ...prev,
-            [optionIndex]: coords,
-        }));
-    };
+    const handleOptionCoordinatesUpdate = useCallback(
+        (optionIndex: number, coords: { x: number; y: number }) => {
+            setOptionCoordinates((prev) => {
+                if (prev[optionIndex]?.x === coords.x && prev[optionIndex]?.y === coords.y) {
+                    return prev;
+                }
+                return {
+                    ...prev,
+                    [optionIndex]: coords,
+                };
+            });
+        },
+        []
+    );
 
     useEffect(() => {
         if (Object.keys(cards).length > 0) {

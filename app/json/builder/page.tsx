@@ -19,8 +19,8 @@ const calculateCardPositions = (cards: { [key: string]: CardData }): { [key: str
     const marginX = 500; // Margen horizontal entre niveles
     const marginY = 300; // Margen vertical entre cartas
 
-    let levels: { [key: string]: string[] } = { "0": ["1-1"] };
-    let visited = new Set(["1-1"]);
+    const levels: { [key: string]: string[] } = { "0": ["1-1"] };
+    const visited = new Set(["1-1"]);
     let maxY = 0;
 
     let level = 0;
@@ -49,7 +49,7 @@ const calculateCardPositions = (cards: { [key: string]: CardData }): { [key: str
     }
 
     Object.values(levels).forEach((nodes) => {
-        let startY = (maxY - (nodes.length * (cardHeight + marginY))) / 2;
+        const startY = (maxY - (nodes.length * (cardHeight + marginY))) / 2;
         nodes.forEach((id, index) => {
             if (newCards[id]) newCards[id].position.y = startY + index * (cardHeight + marginY);
         });
