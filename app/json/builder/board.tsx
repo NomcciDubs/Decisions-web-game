@@ -18,6 +18,7 @@ interface BoardProps {
 
 const Board: React.FC<BoardProps> = ({cards, onOptionDelete, onDeleteCard}) => {
     const [positions, setPositions] = useState<{ [key: string]: { x: number; y: number } }>({});
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [optionCoordinates, setOptionCoordinates] = useState<{ [key: string]: { x: number; y: number } }>({});
     const rootRef = useRef<HTMLDivElement | null>(null);
 
