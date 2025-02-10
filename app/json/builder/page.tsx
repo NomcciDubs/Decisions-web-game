@@ -102,18 +102,10 @@ const Home: React.FC = () => {
         setCards(updatedCards);
     };
 
-    const saveJSON = () => {
-        const blob = new Blob([JSON.stringify(cards, null, 2)], { type: "application/json" });
-        const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = "updated_decisionTree.json";
-        link.click();
-    };
 
     return (
         <div>
             <Board cards={cards} onDeleteCard={handleDeleteCard} onOptionDelete={handleOptionDelete} />
-            <button onClick={saveJSON}>Guardar JSON Actualizado</button>
         </div>
     );
 };

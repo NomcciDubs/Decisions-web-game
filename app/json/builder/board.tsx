@@ -1,6 +1,6 @@
-import React, {useEffect, useState, useRef, useCallback} from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import Card from '@/app/json/builder/card';
-import {Arrow} from 'react-absolute-svg-arrows';
+import { Arrow } from 'react-absolute-svg-arrows';
 
 interface CardData {
     description: string;
@@ -20,9 +20,8 @@ interface BoardProps {
     onOptionDelete?: (cardId: string, index: number, updatedOptions: Option[]) => void
 }
 
-const Board: React.FC<BoardProps> = ({cards, onOptionDelete, onDeleteCard}) => {
+const Board: React.FC<BoardProps> = ({ cards, onOptionDelete, onDeleteCard }) => {
     const [positions, setPositions] = useState<{ [key: string]: { x: number; y: number } }>({});
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [optionCoordinates, setOptionCoordinates] = useState<{ [key: string]: { x: number; y: number } }>({});
     const rootRef = useRef<HTMLDivElement | null>(null);
 
@@ -46,14 +45,14 @@ const Board: React.FC<BoardProps> = ({cards, onOptionDelete, onDeleteCard}) => {
             const newPositions = Object.fromEntries(
                 Object.entries(cards).map(([id, card], index) => [
                     id,
-                    card.position || {x: index * 300, y: 100},
+                    card.position || { x: index * 300, y: 100 },
                 ])
             );
             setPositions(newPositions);
 
             requestAnimationFrame(() => {
                 if (rootRef.current) {
-                    rootRef.current.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
+                    rootRef.current.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
                 }
             });
         }
@@ -62,13 +61,21 @@ const Board: React.FC<BoardProps> = ({cards, onOptionDelete, onDeleteCard}) => {
     const handleDrag = (id: string, x: number, y: number) => {
         setPositions((prev) => ({
             ...prev,
-            [id]: {x, y},
+            [id]: { x, y },
         }));
     };
 
+    // Función para guardar el JSON
+    const saveJSON = () => {
+        const blob = new Blob([JSON.stringify(cards, null, 2)], { type: "application/json" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "updated_decisionTree.json";
+        link.click();
+    };
 
     return (
-        <div style={{position: 'relative', width: '100%', height: '100vh', overflow: 'auto'}}>
+        <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'auto' }}>
             {Object.entries(cards).map(([id, card]) => (
                 <Card
                     key={id}
@@ -76,7 +83,7 @@ const Board: React.FC<BoardProps> = ({cards, onOptionDelete, onDeleteCard}) => {
                     description={card.description}
                     options={card.options}
                     ending={card.ending}
-                    position={positions[id] || {x: 0, y: 0}}
+                    position={positions[id] || { x: 0, y: 0 }}
                     onDrag={handleDrag}
                     onOptionCoordinatesUpdate={handleOptionCoordinatesUpdate}
                     ref={id === "1-1" ? rootRef : null}
@@ -103,15 +110,48 @@ const Board: React.FC<BoardProps> = ({cards, onOptionDelete, onDeleteCard}) => {
                     return (
                         <Arrow
                             key={`${id}-${index}`}
-                            startPoint={{x: sourceX, y: sourceY}}
-                            endPoint={{x: targetX, y: targetY}}
+                            startPoint={{ x: sourceX, y: sourceY }}
+                            endPoint={{ x: targetX, y: targetY }}
                         />
                     );
                 })
             )}
+
+            {/* Botón de descarga */}
+            <button
+                onClick={saveJSON}
+                style={{
+                    position: 'fixed',
+                    top: '2%',
+                    right: '2%',
+                    width: '5%',
+                    height: '10%',
+                    borderRadius: '50%',
+                    backgroundColor: 'lightblue',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    zIndex: 10,
+                }}
+            >
+                {/* SVG del icono de descarga */}
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="50%"
+                    height="50%"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                >
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+            </button>
         </div>
     );
 };
-
 
 export default Board;
